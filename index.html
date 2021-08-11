@@ -7,21 +7,40 @@
         <meta name="author" content="Jovany Cortes Marure">
     
         
-        <h1>Jovany Cortez Marure</h1>
+        
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-<section>
+        <header>
+            <div class="container">
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu_item">Jovany Cortes Marure</li>
+                        <li class="menu_item"><a href="#about">About</a></li>
+                        <li class="menu_item"><a href="#experience_block">Experience</a></li>
+                        <li class="menu_item"><a href="#skills">Skills</a></li>
+                        <li class="menu_item"><a href="#connect">Connect</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+<section id="about">
 <h2>About</h2>
 <p1>Hi! My name is Jovany, and i am part of Code the Dream. I have a been coding since 2013 and is something that I thoroughly enjoy doing. On my free time, I enjoy playing video games and play soccer with my friends.</p1>
 </section>
 <section id="experience_block">
     <h1>Experience</h1>
-    <p1>Mcdonalds, Cashier : 2015 - 2016<br>
-        La Fiesta restaurant, Waiter : 2016 - 2019<br>
-        LC America, Packer : 2019-2020<br>
-        The Building Center, Book Keeper : Current<br> 
-    </p1>
+    <div class="grid">
+        <div class="exp_item">Mcdonalds, Cashier :</div>     
+        <div class="exp_item">2015 - 2016</div>       
+        <div class="exp_item">La Fiesta restaurant, Waiter :</div>       
+        <div class="exp_item">2016 - 2019</div>        
+        <div class="exp_item">LC America, Packer :</div>       
+        <div class="exp_item">2019-2020</div>
+        <div class="exp_item">The Building Center, Book Keeper :</div>
+        <div class="exp_item">Current</div>
+    </div>
 </section>
 <section id="skills">
     <h2>Skills</h2>
@@ -29,7 +48,7 @@
         
     </ul>
 </section>
-<section>
+<section id="connect">
 <h1>Connect</h1>
 <ul>
     <li>Email: <a href="mailto:jovanycortezm@gmail.com">jovanycortezm@gmail.com</a></li>
@@ -39,7 +58,7 @@
 </section>
 <section id="message_sec">
     <h2>Leave a Message!</h2>
-    <form name="leave_message">
+    <form name="leave_message" class="msg_grid">
         <label for="name">Name:</label><br>
         <input type="text" name="name" required=true><br>
         <label for="email">Email:</label><br>

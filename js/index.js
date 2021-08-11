@@ -33,6 +33,7 @@ messageform.addEventListener('submit', (e) => {
     
 
     let newMessage = document.createElement('li');
+    newMessage.className ="msg";
     let a = document.createElement('a');
     let linkText = document.createElement("span");
     a.appendChild(linkText);
