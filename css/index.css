@@ -54,7 +54,7 @@ footer {
 header {
     display: block;
     background-color: #EAE4E9;
-    position: fixed;
+    
     z-index: 2;
 }
 .container {
