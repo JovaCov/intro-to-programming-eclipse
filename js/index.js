@@ -57,18 +57,20 @@ messageform.addEventListener('submit', (e) => {
 
 });  
 
-var githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/JovaCov/repos');
-githubRequest.send();
-githubRequest.onreadystatechange = function () {
-    var repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
+
+fetch('https://api.github.com/users/JovaCov/repos')
+    .then(response => response.json())
+    .then(data => generateList(data))
+
+function generateList(data) {
     let projectSection = document.getElementById('projects');
     let projectlist = projectSection.querySelector('ul');
-    for (let i = 0; i < repositories.length; i++) {
+    
+    for (let i = 0; i < data.length; i++) {
         const project = document.createElement('li');
-        project.innerText = repositories[i].name;
+        project.innerText = data[i].name;
         projectlist.appendChild(project)
+
     }
 }
-
+    
