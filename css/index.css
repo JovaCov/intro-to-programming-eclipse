@@ -5,6 +5,7 @@ html {
 
 body {
     background-color: #BEE1E6;
+    
 }
 h1 {
     color: #FFF1E6;
@@ -13,26 +14,28 @@ h2 {
     color: #FAD2E1;
 }
 section {
-    width: 80%;
-    margin-left: 10%;
+    width: 56%;
+    margin-left: 22%;
     margin-top: 2%;
     padding-top: 1%;
     padding-left: 1%;
     padding-bottom: 1%;
-    background-color: #DFE7FD;
+    background-color: #BEE1E6;
+    border-radius: 23px;
+    filter: drop-shadow(-11px -11px 25px rgb(255,255,255, 0.35));
 }
 
-#experience_block{
-    width: 80%;
-    margin-left: 10%;
-    padding-top: 1%;
-    background-color: #DFE7FD;
-}
+
 #message_sec {
     font-size: 150%;
     text-align: center;
     color: blueviolet;
+    
 
+}
+#message_sec form {
+    display: flex;
+    justify-content: space-evenly;
 }
 #message_sec input {
     
@@ -97,4 +100,58 @@ li {
     grid-template-columns:1fr 1fr; 
     grid-template-rows: 1fr 1fr;
 
+}
+/* #about {
+    
+    width: 25%;
+} */
+
+.abt-sec {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+img {
+    
+    width: 35%;
+    height: 35%;
+}
+.abt-text {
+    width: 35%;
+    /* margin-top: 10%; */
+}
+.skills_dev {
+    display: flex;
+    justify-content: space-evenly;
+}
+.proj-sec {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (min-width: 600px) {
+    html{
+        font-size: 2.25rem;
+    }
+    section {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+    .exp_item {
+        font-size: .45rem;
+    }
+    img {
+        margin-top: 2rem;
+    }
+    #message_sec form {
+        display: inline;
+
+    }
+    button {
+        width: 300px;
+        height: 100px;
+        font-size: 50px;
+          
+    }
 }

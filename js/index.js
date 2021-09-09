@@ -2,11 +2,11 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyRight = document.createElement('p');
-const skillz = ['Basic knowledge of java', 'Basic knowledge of Python', 'Well versed in the Microsoft Suit', 'Fluent in Spanish' ];
+const skillz = ['Basic knowledge of java', 'Basic knowledge of Python', 'Basic knowledge of CSS', 'Basic knowledge of HTML', 'Well versed in the Microsoft Suit', 'Fluent in Spanish'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 const messageform = document.querySelector('form[name="leave_message"]');
-copyRight.innerHTML = 'Jovany Cortes Marure ' + thisYear;
+copyRight.innerHTML = '&copy Jovany Cortes Marure ' + thisYear;
 const messageSection = document.querySelector('#message');
 const messageList = messageSection.querySelector('ul');
 
@@ -57,18 +57,20 @@ messageform.addEventListener('submit', (e) => {
 
 });  
 
-var githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/JovaCov/repos');
-githubRequest.send();
-githubRequest.onreadystatechange = function () {
-    var repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
+
+fetch('https://api.github.com/users/JovaCov/repos')
+    .then(response => response.json())
+    .then(data => generateList(data))
+
+function generateList(data) {
     let projectSection = document.getElementById('projects');
     let projectlist = projectSection.querySelector('ul');
-    for (let i = 0; i < repositories.length; i++) {
+    
+    for (let i = 0; i < data.length; i++) {
         const project = document.createElement('li');
-        project.innerText = repositories[i].name;
+        project.innerText = data[i].name;
         projectlist.appendChild(project)
+
     }
 }
-
+    
