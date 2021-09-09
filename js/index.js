@@ -2,11 +2,11 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyRight = document.createElement('p');
-const skillz = ['Basic knowledge of java', 'Basic knowledge of Python', 'Well versed in the Microsoft Suit', 'Fluent in Spanish' ];
+const skillz = ['Basic knowledge of java', 'Basic knowledge of Python', 'Basic knowledge of CSS', 'Basic knowledge of HTML', 'Well versed in the Microsoft Suit', 'Fluent in Spanish'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 const messageform = document.querySelector('form[name="leave_message"]');
-copyRight.innerHTML = 'Jovany Cortes Marure ' + thisYear;
+copyRight.innerHTML = '&copy Jovany Cortes Marure ' + thisYear;
 const messageSection = document.querySelector('#message');
 const messageList = messageSection.querySelector('ul');
 
